@@ -31,7 +31,7 @@ public class ZipUtility : ModuleRules
             else
             {
                 // If failed - using the most common install path
-                string vsDefaultBasePath = @"C:\Program Files (x86)\Microsoft Visual Studio\2017";
+                string vsDefaultBasePath = @"C:\Program Files (x86)\Microsoft Visual Studio\2019";
                 string vsVersion = Directory.GetDirectories(vsDefaultBasePath)[0];
                 string vsPath = Path.Combine(vsDefaultBasePath, vsVersion);
                 Console.WriteLine("ZipUtility Warning: Using default VS path: " + vsPath);
@@ -45,7 +45,7 @@ public class ZipUtility : ModuleRules
         get
         {
             // Trying to find ATL path similar to:
-            // C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.14.26428/atlmfc
+            // C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.14.26428/atlmfc
             string atlPath = "";
             try
             {
